@@ -1,6 +1,6 @@
 ### HTML5EpiserverCMSColorPicker
 
-This is DOJO widget for Episerver CMS providing the option to pick a color using HTML5 input element of type color.
+This is Dojo widget for Episerver CMS providing the option to pick a color using HTML5 input element of type color.
 
 ### License
 MIT
