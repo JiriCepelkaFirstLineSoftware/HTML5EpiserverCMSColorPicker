@@ -26,3 +26,6 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
     [ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/editors/HTML5ColorPicker")]
     public virtual string Color { get; set; }
 ```
+#Encouragement
+
+Since MIT licensed you are encouraged to alter the files to meet your needs. Especially the styles must not suit everyone.
