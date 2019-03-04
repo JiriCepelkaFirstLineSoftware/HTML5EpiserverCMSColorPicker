@@ -72,7 +72,7 @@ define([
         _loadCssFile: function () {
 
           let script;
-          if (navigator.userAgent.indexOf('Edge') > -1) {
+          if (navigator.userAgent.toLowerCase().indexOf('edge') > -1) {
             script = 'HTML5ColorPicker_Edge';
           }
           else {
