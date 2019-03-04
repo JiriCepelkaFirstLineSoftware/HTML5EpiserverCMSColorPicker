@@ -36,3 +36,10 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
 ### Encouragement
 
 Since MIT licensed you are encouraged to alter the files to meet your needs. Especially the styles must not suit everyone and MS Edge is not to able to open its picker on JS click so it is treated differently.
+
+### Browser support
+
+Works with:
+* Firefox
+* Chrome
+* Edge
