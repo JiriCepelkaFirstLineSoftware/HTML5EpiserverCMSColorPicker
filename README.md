@@ -24,5 +24,5 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
 3. Decorate you properties.
 ```c#
     [ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/editors/HTML5ColorPicker")]
-    public virtual string ColorTest3 { get; set; }
+    public virtual string Color { get; set; }
 ```
