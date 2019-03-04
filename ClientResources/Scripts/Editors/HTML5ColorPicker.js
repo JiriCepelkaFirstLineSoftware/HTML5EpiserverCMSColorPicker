@@ -5,7 +5,7 @@ define([
 
   "dijit/_Widget",
   "dijit/_TemplatedMixin",
-  "dijit/_CssStateMixin",  
+  "dijit/_CssStateMixin",
 ],
   function (
     query,
@@ -27,7 +27,6 @@ define([
 
         postCreate: function () {
 
-          this.inherited(arguments);
           this._bindEvents(this);
           this._loadCssFile();
         },
@@ -35,7 +34,7 @@ define([
         _setValueAttr: function (value) {
           query(this.HTML5ColorPicker)[0].value = value
 
-          this._setBackgroundColor(value);
+          this._setControlColor(value);
         },
 
         _setReadOnlyAttr: function (value) {
@@ -44,12 +43,17 @@ define([
 
         _setValue: function (value) {
 
-          this._set("value", value);         
-          this._setBackgroundColor(value);
+          this._set("value", value);
+          this._setControlColor(value);
 
           if (this._started) {
             this.onChange(value);
           }
+        },
+
+        _setControlColor(value) {
+
+          query(this.HTML5ColorPickerControl)[0].style.backgroundColor = value;
         },
 
         _bindEvents: function (myself) {
@@ -60,12 +64,12 @@ define([
             html5ColorPicker.click();
           });
 
-          on(html5ColorPicker , "change", function (e) {
+          on(html5ColorPicker, "change", function (e) {
             myself._setValue(e.currentTarget.value);
           });
         },
 
-        _loadCssFile: function () {          
+        _loadCssFile: function () {
           var cssId = 'HTML5ColorPicker';
           if (!document.getElementById(cssId)) {
             let head = document.getElementsByTagName('head')[0];
@@ -78,11 +82,6 @@ define([
             head.appendChild(link);
           }
         },
-
-        _setBackgroundColor(value) {          
-
-            query(this.HTML5ColorPickerControl)[0].style.backgroundColor = value;         
-        }
 
       });
   });
