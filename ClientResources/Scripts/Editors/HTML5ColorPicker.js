@@ -22,7 +22,7 @@ define([
         templateString:
           "<div class=\"dijitInline\">\
              <div class=\"HTML5ColorPickerControl\" data-dojo-attach-point=\"HTML5ColorPickerControl\"></div>\
-             <input type=\"color\" class=\"HTML5ColorPicker\" data-dojo-attach-point=\"HTML5ColorPicker\">\
+             <input type=\"color\" title=\"Color picker\" class=\"HTML5ColorPicker\" data-dojo-attach-point=\"HTML5ColorPicker\">\
            <div>",
 
         postCreate: function () {
@@ -70,6 +70,15 @@ define([
         },
 
         _loadCssFile: function () {
+
+          let script;
+          if (navigator.userAgent.indexOf('Edge') > -1) {
+            script = 'HTML5ColorPicker_Edge';
+          }
+          else {
+            script = 'HTML5ColorPicker';
+          }
+
           var cssId = 'HTML5ColorPicker';
           if (!document.getElementById(cssId)) {
             let head = document.getElementsByTagName('head')[0];
@@ -77,7 +86,7 @@ define([
             link.id = cssId;
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = '/ClientResources/Scripts/Editors/themes/HTML5ColorPicker.css';
+            link.href = '/ClientResources/Scripts/Editors/themes/'+script+'.css';
             link.media = 'all';
             head.appendChild(link);
           }

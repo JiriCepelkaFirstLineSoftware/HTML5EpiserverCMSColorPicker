@@ -1,0 +1,14 @@
+﻿input.HTML5ColorPicker {
+  width: 101px;
+  height: 32px;
+  border: #929ba4 1px solid;
+}
+
+div.HTML5ColorPickerControl:hover {
+  opacity: 0.6;
+  box-shadow: none;
+}
+
+div.HTML5ColorPickerControl {
+  display: none; 
+}
