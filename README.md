@@ -16,23 +16,22 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
 ##### Script
 
 ``` javascript
-
-    return declare("YOUR_SITE_PREFIX/editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
+return declare("YOUR_SITE_PREFIX/editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
 ```
 ##### Config
 
 ```xml
-    <dojo>    
-      <paths>
-        <add name="YOUR_SITE_PREFIX" path="Scripts" />
-      </paths>
+<dojo>    
+  <paths>
+    <add name="YOUR_SITE_PREFIX" path="Scripts" />
+  </paths>
     …
 ```
     
 3. Decorate you properties.
 ```c#
-    [ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/editors/HTML5ColorPicker")]
-    public virtual string Color { get; set; }
+[ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/editors/HTML5ColorPicker")]
+public virtual string Color { get; set; }
 ```
 #Encouragement
 
