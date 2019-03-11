@@ -16,7 +16,7 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
     ##### Script
 
     ``` javascript
-    return declare("YOUR_SITE_PREFIX/editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
+    return declare("YOUR_SITE_PREFIX/Editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
      ```
     ##### Config
 
@@ -30,7 +30,7 @@ Construed from [knowit/ColorPickerEditor](https://github.com/knowit/ColorPickerE
     
 3. Decorate you properties.
     ```c#
-    [ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/editors/HTML5ColorPicker")]
+    [ClientEditor(ClientEditingClass = "YOUR_SITE_PREFIX/Editors/HTML5ColorPicker")]
     public virtual string Color { get; set; }
     ```
 ### Encouragement
