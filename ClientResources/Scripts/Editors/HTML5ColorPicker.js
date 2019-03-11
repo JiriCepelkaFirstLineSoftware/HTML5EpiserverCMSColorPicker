@@ -14,7 +14,7 @@ define([
     _TemplatedMixin,
     _CssStateMixin,
   ) {
-    return declare("alloy/editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
+    return declare("alloy/Editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
       {
 
         templateString:
