@@ -1,5 +1,4 @@
 define([
-  "dojo/query",
   "dojo/on",
   "dojo/_base/declare",
 
@@ -8,7 +7,6 @@ define([
   "dijit/_CssStateMixin",
 ],
   function (
-    query,
     on,
     declare,
 
@@ -32,8 +30,7 @@ define([
         },
 
         _setValueAttr: function (value) {
-          query(this.HTML5ColorPicker)[0].value = value
-
+          this.HTML5ColorPicker.value = value
           this._setControlColor(value);
         },
 
@@ -53,18 +50,16 @@ define([
 
         _setControlColor(value) {
 
-          query(this.HTML5ColorPickerControl)[0].style.backgroundColor = value;
+          this.HTML5ColorPickerControl.style.backgroundColor = value;
         },
 
         _bindEvents: function (myself) {
 
-          let html5ColorPicker = query(myself.HTML5ColorPicker)[0];
-
-          on(query(this.HTML5ColorPickerControl)[0], "click", function (e) {
-            html5ColorPicker.click();
+          on(this.HTML5ColorPickerControl, "click", function (e) {
+            myself.HTML5ColorPicker.click();
           });
 
-          on(html5ColorPicker, "change", function (e) {
+          on(this.HTML5ColorPicker, "change", function (e) {
             myself._setValue(e.currentTarget.value);
           });
         },
@@ -79,19 +74,18 @@ define([
             script = 'HTML5ColorPicker';
           }
 
-          var cssId = 'HTML5ColorPicker';
+          var cssId = 'HTML5ColorPickerCss';
           if (!document.getElementById(cssId)) {
             let head = document.getElementsByTagName('head')[0];
             let link = document.createElement('link');
             link.id = cssId;
             link.rel = 'stylesheet';
             link.type = 'text/css';
-            link.href = '/ClientResources/Scripts/Editors/themes/'+script+'.css';
+            link.href = '/ClientResources/Scripts/Editors/themes/' + script + '.css';
             link.media = 'all';
             head.appendChild(link);
           }
         },
-
       });
   });
 
