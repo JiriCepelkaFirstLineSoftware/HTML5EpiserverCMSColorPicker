@@ -3,18 +3,16 @@ define([
   "dojo/_base/declare",
 
   "dijit/_Widget",
-  "dijit/_TemplatedMixin",
-  "dijit/_CssStateMixin",
+  "dijit/_TemplatedMixin",  
 ],
   function (
     on,
     declare,
 
     _Widget,
-    _TemplatedMixin,
-    _CssStateMixin,
+    _TemplatedMixin,    
   ) {
-    return declare("alloy/Editors/HTML5ColorPicker", [_Widget, _TemplatedMixin, _CssStateMixin],
+    return declare("alloy/Editors/HTML5ColorPicker", [_Widget, _TemplatedMixin],
       {
 
         templateString:
