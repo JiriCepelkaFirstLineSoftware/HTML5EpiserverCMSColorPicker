@@ -2,6 +2,8 @@
   width: 101px;
   height: 32px;
   border: 1px solid #929ba4;
+  cursor: auto;
+  cursor: pointer;
 }
 
 div.HTML5ColorPickerControl {
